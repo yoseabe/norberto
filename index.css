@@ -37,6 +37,7 @@ body {
 .navbar {
   position: fixed;
   width: 100%;
+  height: 62px;
   display: flex;
   justify-content: space-around;
   background-color: whitesmoke;
