@@ -40,7 +40,7 @@ function getJsonData(tableID, type) {
           tr1.appendChild(zutaten);
           tr1.appendChild(preisS);
           tr1.appendChild(preisL);
-          table.querySelector("tbody").appendChild(tr1);
+          //table.querySelector("tbody").appendChild(tr1);
         }
       }
     });
