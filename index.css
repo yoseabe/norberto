@@ -23,6 +23,9 @@
   .discService {
     font-size: 4vw !important;
   }
+  .foot {
+    height: 250px !important;
+  }
 }
 html {
   scroll-behavior: smooth;
@@ -51,7 +54,7 @@ body {
   cursor: pointer;
 }
 .navItem:hover {
-  color: #22310d;
+  color: #7a945a;
 }
 .logo {
   border-radius: 4px;
@@ -62,7 +65,6 @@ body {
   align-items: center;
 }
 .norberto {
-  margin-top: 10px;
   text-decoration: none;
   color: white;
   font-size: 40px;
@@ -76,7 +78,16 @@ body {
 }
 
 .landingImage {
-  background-image: url("images/pizzaBigScreen.jpg");
+  /*background-image: url("images/pizzaBigScreen.jpg");
+*/
+
+  background:
+        /* top, transparent black, faked with gradient */ linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.4)
+    ),
+    /* bottom, image */ url("images/pizzaBigScreen.jpg");
+
   background-size: cover;
   height: 80vh;
   display: flex;
@@ -87,7 +98,7 @@ body {
 .landingImage a {
   font-weight: 700;
   color: white;
-  font-size: 4vw;
+  font-size: 50px;
   margin-left: 10px;
 }
 
@@ -126,7 +137,6 @@ body {
 
 .openDay {
   padding-right: 20px;
-  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
 }
@@ -171,4 +181,66 @@ th {
 
 tr:nth-child(even) {
   background-color: #dddddd;
+}
+
+.pdfBtn {
+  background-color: #5a8222;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  font-family: "Edu NSW ACT Foundation", cursive;
+  text-decoration: none;
+  font-size: 20px;
+  transition: border-radius 0.3s ease;
+}
+.pdfBtn:hover {
+  background-color: #7a945a;
+  border-radius: 10px;
+}
+
+.foot {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #5a8222;
+  height: 150px;
+}
+
+.foot img {
+  height: 70px;
+  width: auto;
+}
+.foot img:hover {
+  opacity: 0.6;
+}
+
+.adress {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.adress a {
+  font-family: "Edu NSW ACT Foundation", cursive;
+  color: white;
+  font-size: 20px;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+}
+.links a {
+  font-family: "Edu NSW ACT Foundation", cursive;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding: 0px 10px;
+}
+
+.logoAndLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
