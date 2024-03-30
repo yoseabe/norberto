@@ -1,0 +1,48 @@
+{
+  "Pizza Category": [
+    {
+      "nummer": "1.",
+      "name": "Margherita",
+      "zutaten": "mit Zwiebeln",
+      "priceS": "4,00",
+      "priceL": "6,00"
+    },
+    {
+      "nummer": "1.",
+      "name": "Margherita",
+      "zutaten": "mit Zwiebeln",
+      "priceS": "4,00",
+      "priceL": "6,00"
+    },
+    {
+      "nummer": "1.",
+      "name": "Margherita",
+      "zutaten": "mit Zwiebeln",
+      "priceS": "4,00",
+      "priceL": "6,00"
+    }
+  ],
+  "Pizzabrötchen und Paninis": [
+    {
+      "nummer": "1.",
+      "name": "Margherita",
+      "zutaten": "mit Zwiebeln",
+      "priceS": "4,00",
+      "priceL": "6,00"
+    },
+    {
+      "nummer": "1.",
+      "name": "Margherita",
+      "zutaten": "mit Zwiebeln",
+      "priceS": "4,00",
+      "priceL": "6,00"
+    },
+    {
+      "nummer": "1.",
+      "name": "Margherita",
+      "zutaten": "mit Zwiebeln",
+      "priceS": "4,00",
+      "priceL": "6,00"
+    }
+  ]
+}

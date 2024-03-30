@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Lobster&display=swap");
+@media only screen and (max-width: 600px) {
+  .landingImage {
+    background-image: url("images/pizza.jpg") !important;
+  }
+  .landingImage a {
+    font-size: 8vw !important;
+  }
+  .secondRow {
+    display: flex !important;
+    flex-wrap: wrap;
+  }
+  .lieferService {
+    padding: 20px !important;
+    border: solid rgb(0, 0, 0) 1px !important;
+
+    width: auto !important;
+  }
+  .titelService {
+    font-size: 6vw !important;
+  }
+  .discService {
+    font-size: 4vw !important;
+  }
+  .foot {
+    height: 250px !important;
+  }
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 70px;
+}
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 0px;
+  margin: 0px;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  height: 62px;
+  display: flex;
+  justify-content: space-around;
+  background-color: whitesmoke;
+  border-bottom: solid black 1px;
+  align-items: center;
+}
+.navItem {
+  font-size: 20px;
+  color: #5a8222;
+  text-decoration: none;
+  cursor: pointer;
+}
+.navItem:hover {
+  color: #7a945a;
+}
+.logo {
+  border-radius: 4px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #5a8222;
+  align-items: center;
+}
+.norberto {
+  text-decoration: none;
+  color: white;
+  font-size: 40px;
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 12px;
+}
+.underNorberto {
+  color: white;
+  font-size: 20px;
+}
+
+.landingImage {
+  /*background-image: url("images/pizzaBigScreen.jpg");
+*/
+
+  background:
+        /* top, transparent black, faked with gradient */ linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.4)
+    ),
+    /* bottom, image */ url("images/pizzaBigScreen.jpg");
+
+  background-size: cover;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.landingImage a {
+  font-weight: 700;
+  color: white;
+  font-size: 50px;
+  margin-left: 10px;
+}
+
+.secondRow {
+  display: flex;
+  margin: 20px;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.lieferService {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  border: solid rgb(255, 255, 255) 1px;
+  margin-bottom: 20px;
+}
+.titelService {
+  font-family: "Lobster", sans-serif;
+  color: #5a8222;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.discService {
+  font-family: "Edu NSW ACT Foundation", cursive;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.openContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.openDay {
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.menuTitel {
+  font-family: "Edu NSW ACT Foundation", cursive;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.menuTitel:hover {
+  color: rgb(100, 98, 98);
+}
+details[open] summary ~ * {
+  animation: sweep 0.5s ease-in-out;
+}
+
+@keyframes sweep {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  font-family: "Edu NSW ACT Foundation", cursive;
+  font-size: 20px;
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.pdfBtn {
+  background-color: #5a8222;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  font-family: "Edu NSW ACT Foundation", cursive;
+  text-decoration: none;
+  font-size: 20px;
+  transition: border-radius 0.3s ease;
+}
+.pdfBtn:hover {
+  background-color: #7a945a;
+  border-radius: 10px;
+}
+
+.foot {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #5a8222;
+  height: 150px;
+}
+
+.foot img {
+  height: 70px;
+  width: auto;
+}
+.foot img:hover {
+  opacity: 0.6;
+}
+
+.adress {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.adress a {
+  font-family: "Edu NSW ACT Foundation", cursive;
+  color: white;
+  font-size: 20px;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+}
+.links a {
+  font-family: "Edu NSW ACT Foundation", cursive;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding: 0px 10px;
+}
+
+.logoAndLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
