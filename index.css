@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Lobster&display=swap");
 @media only screen and (max-width: 600px) {
   .landingImage {
-    background-image: url("images/pizza.jpg") !important;
+    background-image: url("images/pizza_1.webp") !important;
   }
   .landingImage a {
     font-size: 8vw !important;
@@ -88,7 +88,7 @@ body {
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.4)
     ),
-    /* bottom, image */ url("images/pizzaBigScreen.jpg");
+    /* bottom, image */ url("images/pizzaBigScreen.webp");
 
   background-size: cover;
   height: 80vh;
