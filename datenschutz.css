@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+body{
+    max-width: 100%;
+    margin: 0px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+h1{
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    color: #5a8222;
+    font-size: 40px;
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.mainTitelDiv{
+    display: flex;
+    justify-content: center;
+}
+.unterTitelDiv{
+    justify-content: left !important;
+    display: flex;
+
+}
