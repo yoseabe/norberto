@@ -1,5 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Lobster&display=swap");
+@font-face {
+  font-family: cursiveTitel;
+  src: url("Lobster-Regular.ttf");
+}
+@font-face {
+  font-family: cursiveDisc;
+  src: url("EduNSWACTFoundation-VariableFont_wght.ttf");
+}
 @media only screen and (max-width: 600px) {
   .landingImage {
     background-image: url("images/pizza_1.webp") !important;
@@ -69,7 +75,7 @@ body {
   text-decoration: none;
   color: white;
   font-size: 40px;
-  font-family: "Lobster", sans-serif;
+  font-family: cursiveTitel;
   font-weight: 400;
   font-style: normal;
   margin-top: 12px;
@@ -120,14 +126,15 @@ body {
   margin-bottom: 20px;
 }
 .titelService {
-  font-family: "Lobster", sans-serif;
+  font-family: cursiveTitel;
   color: #5a8222;
   font-size: 40px;
   margin-bottom: 20px;
 }
 
 .discService {
-  font-family: "Edu NSW ACT Foundation", cursive;
+  font-family: cursiveDisc;
+  font-weight: 500;
   font-size: 20px;
   text-decoration: none;
 }
@@ -190,7 +197,7 @@ tr:nth-child(even) {
   color: white;
   border-radius: 5px;
   padding: 5px;
-  font-family: "Edu NSW ACT Foundation", cursive;
+  font-family: cursiveDisc;
   text-decoration: none;
   font-size: 20px;
   transition: border-radius 0.3s ease;
@@ -224,7 +231,7 @@ tr:nth-child(even) {
 }
 
 .adress a {
-  font-family: "Edu NSW ACT Foundation", cursive;
+  font-family: cursiveDisc;
   color: white;
   font-size: 20px;
 }
@@ -233,7 +240,7 @@ tr:nth-child(even) {
   flex-direction: column;
 }
 .links a {
-  font-family: "Edu NSW ACT Foundation", cursive;
+  font-family: cursiveDisc;
   color: white;
   font-size: 20px;
   margin-bottom: 10px;
