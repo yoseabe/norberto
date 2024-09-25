@@ -1,0 +1,19 @@
+{% sw_extends '@Storefront/storefront/component/buy-widget/buy-widget-price.html.twig' %}
+
+{% block buy_widget_price_inner %}
+    {{ parent() }}
+    {% block page_product_box_refund %}
+        <div class="refund-system-container">
+        {% if product.hasRefund.name !='' %}
+            <p class="product-price">
+                {{ product.hasRefund.name }}
+            </p>
+        {% endif %}
+        {% if product.hasRefund.calculated_price > 0 and product.hasRefund.name !='' %}
+            <div class="product-detail-refund-container">
+                {{ "refundsystem.general.exclusive"|trans|striptags }} {{ product.hasRefund.calculated_price|currency }} {{ "refundsystem.general.refund"|trans|striptags }}
+            </div>
+        {% endif %}
+        </div>
+    {% endblock %}
+{% endblock %}

@@ -1,0 +1,12 @@
+{
+    "sw-custom-field-set-renderer": {
+        "refund_system": {
+            "button": "Einstellungen auf Artikel übernehmen",
+            "title": "Bist du dir sicher?",
+            "text": "Bist du dir sicher, dass du diese Einstellungen für die Artikel unter dieser Kategorie übernehmen möchtest?",
+            "save": "Speichern",
+            "cancel": "Abbrechen",
+            "info-text": "Die Änderungen, die in diesen Feldern vorgenommen werden, werden auf die Artikel unter dieser Kategorie übertragen"
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "refundsystem": {
+        "general": {
+            "mainMenuEntry": "Refundsystem",
+            "placeholderSearchBar": "Search",
+            "searchType": "Refund",
+            "exclusive": "excl."
+        },
+        "list": {
+            "textOverview": "Refund Overview",
+            "buttonAddGroup": "add",
+            "columnName": "Name",
+            "columnStatus": "Status",
+            "columnDescription": "Description",
+            "columnDateUpdated": "Last Edit",
+            "messageEmpty": "Nothing"
+        },
+        "detail": {
+            "textHeadline": "New Refund",
+            "buttonCancel": "Cancel",
+            "buttonSave": "Save",
+            "cardTitleInfo": "Information",
+            "labelName": "Name",
+            "placeholderName": "Name ...",
+            "labelDescription": "Description *",
+            "placeholderDescription": "Description ...",
+            "titleSaveSuccess": "Success",
+            "messageSaveSuccess": "\"{name}\" successfull saved.",
+            "titleSaveError": "Error",
+            "messageSaveError": "\"{name}\" not saved.",
+            "labelMedia": "Display image"
+        }
+    },
+    "global": {
+        "entities": {
+            "refund_system": "Refundsystem"
+        }
+    }
+}

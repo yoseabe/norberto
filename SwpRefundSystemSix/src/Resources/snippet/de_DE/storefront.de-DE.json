@@ -1,0 +1,11 @@
+{
+    "refundsystem": {
+        "general": {
+            "refund": "Pfand",
+            "exclusive": "zzgl.",
+            "pretotal": "Summe Pfand mit ",
+            "posttotal": " % Umsatzsteuer",
+            "additional": "+"
+        }
+    }
+}

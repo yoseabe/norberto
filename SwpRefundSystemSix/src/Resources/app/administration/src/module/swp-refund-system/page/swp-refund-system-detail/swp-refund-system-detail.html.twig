@@ -1,0 +1,124 @@
+{% block refund_system_six_detail %}
+<sw-page class="refund-system-six-detail">
+
+    {% block refund_system_six_detail_header %}
+    <template #smart-bar-header>
+        <h2>{{ placeholder(refundSystem, 'name', $tc('refundsystem.detail.textHeadline')) }}</h2>
+    </template>
+    {% endblock %}
+
+    {% block refund_system_six_detail_actions %}
+    <template #smart-bar-actions>
+
+        {% block refund_system_six_detail_actions_abort %}
+        <sw-button :disabled="refundSystemIsLoading" v-tooltip.bottom="tooltipCancel" @click="onCancel">
+            {{ $tc('refundsystem.detail.buttonCancel') }}
+        </sw-button>
+        {% endblock %}
+
+        {% block refund_system_six_detail_actions_save %}
+        <sw-button-process
+            class="refund-system-six-detail__save-action"
+            :isLoading="isLoading"
+            v-model:value="isSaveSuccessful"
+            :disabled="isLoading"
+            variant="primary"
+            v-tooltip.bottom="tooltipSave"
+            @click.prevent="onSave">
+            {{ $tc('refundsystem.detail.buttonSave') }}
+        </sw-button-process>
+        {% endblock %}
+
+    </template>
+    {% endblock %}
+
+    {% block refundSystem_language_switch %}
+    <template #language-switch>
+        <sw-language-switch
+            :disabled="!refundSystemId"
+            :saveChangesFunction="saveOnLanguageChange"
+            :abortChangeFunction="abortOnLanguageChange"
+            @on-change="onChangeLanguage">
+        </sw-language-switch>
+    </template>
+    {% endblock %}
+
+
+    {% block refund_system_six_detail_content %}
+<template #content>
+    <sw-card-view>
+
+        {% block refund_system_six_detail_content_language_info %}
+        <sw-language-info
+            :entityDescription="placeholder(refundSystem, 'name', $tc('refundsystem.detail.textHeadline'))">
+        </sw-language-info>
+        {% endblock %}
+
+        {% block refund_system_six_detail_base_basic_info_card %}
+        <sw-card :title="$tc('refundsystem.detail.cardTitleInfo')" :isLoading="refundSystemIsLoading" positionIdentifier="refund-system-six-detail">
+            <template v-if="!refundSystemIsLoading">
+                <sw-container class="refund-system-six-detail__container"
+                              columns="repeat(auto-fit, minmax(250px, 1fr)"
+                              gap="0 30px">
+                    <div class="refund-system-six-detail__base-info-wrapper">
+
+                        {% block refund_system_six_detail_base_info_field_name %}
+                        <sw-text-field :label="$tc('refundsystem.detail.labelName')"
+                                  :placeholder="placeholder(refundSystem, 'name', $tc('refundsystem.detail.placeholderName'))"
+                                  name="name"
+                                  validation="required"
+                                  required
+                                  {#:error="graduatedPriceGroupsNameError" #}
+                                  v-model:value="refundSystem.name">
+                        </sw-text-field>
+                        {% endblock %}
+
+                        {% block refund_system_six_settings_form_active_field %}
+                        <sw-switch-field :label="$tc('sw-product.settingsForm.labelActive')"
+                                  v-model:value="refundSystem.active">
+                        </sw-switch-field>
+                        {% endblock %}
+
+                    </div>
+                </sw-container>
+
+                {% block refund_system_six_detail_base_info_field_description %}
+                <sw-text-editor
+                    :label="$tc('refundsystem.detail.labelDescription')"
+                    :placeholder="placeholder(refundSystem, 'description', $tc('refundsystem.detail.placeholderDescription'))"
+                    name="description"
+                    validation="required"
+                    required
+                    v-model:value="refundSystem.description">
+                </sw-text-editor>
+                {% endblock %}
+
+                {% block refund_system_six_detail_base_info_field_media %}
+                    <sw-upload-listener
+                            :key="refundSystem.id + 'uploadListener'"
+                            :upload-tag="refundSystem.id"
+                            auto-upload
+                            @media-upload-finish="onSetMediaItem"
+                    />
+                    <sw-media-upload-v2
+                            :key="refundSystem.id + 'upload'"
+                            :label="$tc('refundsystem.detail.labelMedia')"
+                            variant="regular"
+                            :source="mediaItem"
+                            :upload-tag="refundSystem.id"
+                            :allow-multi-select="false"
+                            :default-folder="getDefaultFolder"
+                            @media-drop="onMediaDropped"
+                            @media-upload-remove-image="onRemoveMediaItem"
+                    />
+                {% endblock %}
+
+            </template>
+        </sw-card>
+        {% endblock %}
+    </sw-card-view>
+</template>
+    {% endblock %}
+
+</sw-page>
+{% endblock %}

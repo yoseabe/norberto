@@ -1,0 +1,11 @@
+{
+    "refundsystem": {
+        "general": {
+            "refund": "Refund",
+            "exclusive": "excl.",
+            "pretotal": "Refund Amount with ",
+            "posttotal": " % VAT",
+            "additional": "+"
+        }
+    }
+}

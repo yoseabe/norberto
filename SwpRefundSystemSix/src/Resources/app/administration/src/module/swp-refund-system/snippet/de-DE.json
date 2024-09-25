@@ -1,0 +1,39 @@
+{
+    "refundsystem": {
+        "general": {
+            "mainMenuEntry": "Pfandsystem",
+            "placeholderSearchBar": "Durchsuche alle Pfandarten ...",
+            "searchType": "Pfand",
+            "exclusive": "excl."
+        },
+        "list": {
+            "textOverview": "Pfandarten",
+            "buttonAddGroup": "hinzufügen",
+            "columnName": "Name",
+            "columnStatus": "Status",
+            "columnDescription": "Beschreibung",
+            "columnDateUpdated": "Änderungsdatum",
+            "messageEmpty": "Du hast noch nichts angelegt."
+        },
+        "detail": {
+            "textHeadline": "Neue Pfandart",
+            "buttonCancel": "Abbrechen",
+            "buttonSave": "Speichern",
+            "cardTitleInfo": "Informationen",
+            "labelName": "Name",
+            "placeholderName": "Gib einen Namen ein ...",
+            "labelDescription": "Beschreibung *",
+            "placeholderDescription": "Gib eine Beschreibung ein ...",
+            "titleSaveSuccess": "Erfolg",
+            "messageSaveSuccess": "\"{name}\" wurde erfolgreich gespeichert.",
+            "titleSaveError": "Fehler",
+            "messageSaveError": "\"{name}\" konnte nicht gespeichert werden.",
+            "labelMedia": "Anzeigebild"
+        }
+    },
+    "global": {
+        "entities": {
+            "refund_system": "Pfandsystem"
+        }
+    }
+}

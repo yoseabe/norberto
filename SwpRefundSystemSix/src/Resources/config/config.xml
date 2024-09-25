@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/master/src/Core/System/SystemConfig/Schema/config.xsd">
+
+    <card>
+        <title>Configuration Channel</title>
+        <title lang="de-DE">Konfiguration Kanal</title>
+
+        <component name="refundsystem-doku-button">
+            <name>button</name>
+            <variant>primary</variant>
+            <linken>https://docs.google.com/document/d/1GmIzwpqb9FLZFYtqOk5Ex_LUqSlyziy0jfUPGRxxHig/edit?usp=sharing</linken>
+            <linkde>https://docs.google.com/document/d/1mmzZOThyrzXeFfxIReF7YlwCuxY6TB1ZBrpsaiQjUMw/edit?usp=sharing</linkde>
+        </component>
+
+        <input-field type="bool">
+            <name>channelActive</name>
+            <label>Activate plugin for this channel</label>
+            <label lang="de-DE">Plugin für diesen Kanal aktivieren</label>
+            <defaultValue>false</defaultValue>
+        </input-field>
+
+        <input-field type="bool">
+            <name>showChildItems</name>
+            <label>Show Refund for every Article in Cart</label>
+            <label lang="de-DE">Zeige im Warenkorb Pfand für Einzelartikel</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+
+    </card>
+</config>

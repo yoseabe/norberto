@@ -1,0 +1,14 @@
+{% sw_extends '@Storefront/storefront/component/line-item/element/image.html.twig' %}
+
+{% block component_line_item_image %}
+    {% if lineItem.type is same as ('refundTotal') or (lineItem.type is same as ('refund') and not lineItem.cover) %}
+        {% sw_include '@Storefront/storefront/utilities/icon.html.twig' with {
+            name: 'arrow-360-left',
+            color: 'light',
+            size: 'fluid'
+        } %}
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}
+

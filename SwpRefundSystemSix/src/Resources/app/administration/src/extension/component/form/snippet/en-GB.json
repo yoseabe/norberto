@@ -1,0 +1,12 @@
+{
+    "sw-custom-field-set-renderer": {
+        "refund_system": {
+            "button": "Mirror settings to articles",
+            "title": "Are you sure?",
+            "text": "Are you sure you want to mirror these settings to the articles under this category?",
+            "save": "Save",
+            "cancel": "Cancel",
+            "info-text": "The changes made in these fields are mirrored to the articles under this category"
+        }
+    }
+}

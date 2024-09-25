@@ -1,0 +1,60 @@
+{% block sw_custom_field_set_renderer_card_form_renderer %}
+    {% parent() %}
+
+    {% block sw_custom_field_set_renderer_card_form_renderer_refund_system %}
+        <template v-if="$route.name === 'sw.category.detail.base'">
+            <div v-show="showProcessRefundSystem(active)">
+                {% block sw_custom_field_set_renderer_card_form_renderer_refund_system_info %}
+                    <div class="customfields-refundsystem--button-info">
+                        {{ $tc('sw-custom-field-set-renderer.refund_system.info-text') }}
+                    </div>
+                {% endblock %}
+
+                {% block sw_custom_field_set_renderer_card_form_renderer_refund_system_button %}
+                    <sw-button
+                        class="sw-category-detail-base__button"
+                        variant="ghost"
+                        :disabled="!acl.can('category.editor') || categoryNotSaved"
+                        @click="openProcessRefundSystemSixModal"
+                    >
+                        {{ $tc('sw-custom-field-set-renderer.refund_system.button') }}
+                    </sw-button>
+                {% endblock %}
+            </div>
+
+            {% block sw_custom_field_set_renderer_card_form_renderer_refund_system_modal %}
+                <sw-modal v-if="showRefundSystemSixModal"
+                          :title="$tc('sw-custom-field-set-renderer.refund_system.title')"
+                          class="sw_custom_field_refund_system_six_modal__save"
+                          @modal-close="closeRefundSystemSixModal">
+
+                    <div>
+                        {{ $tc('sw-custom-field-set-renderer.refund_system.text') }}
+                    </div>
+
+                    <template #modal-footer>
+
+                        {% block sw_custom_field_set_renderer_card_form_renderer_refund_system_modal_save %}
+                            <sw-button class="sw-category-detail-layout-card-assign__action"
+                                       @click="saveRefundSystemSix"
+                                       variant="primary"
+                                       size="small">
+
+                                {{ $tc('sw-custom-field-set-renderer.refund_system.save') }}
+                            </sw-button>
+                        {% endblock %}
+
+                        {% block sw_custom_field_set_renderer_card_form_renderer_refund_system_modal_cancel %}
+                            <sw-button @click="closeRefundSystemSixModal"
+                                       size="small">
+
+                                {{ $tc('sw-custom-field-set-renderer.refund_system.cancel') }}
+                            </sw-button>
+                        {% endblock %}
+
+                    </template>
+                </sw-modal>
+            {% endblock %}
+        </template>
+    {% endblock %}
+{% endblock %}

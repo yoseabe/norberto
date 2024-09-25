@@ -1,0 +1,56 @@
+@import '~scss/variables';
+
+$refundsystem-doku-button-transition: all 0.15s ease-out;
+
+.refundsystem-doku-button {
+    border: 1px solid #c2ccd6;
+    background: #f9fafb;
+    transition: all 0.15s ease-out;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 2px 24px;
+    outline: none;
+    font-weight: 600;
+    font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    user-select: none;
+    margin: 0;
+    position: relative;
+
+    span {
+        color: $color-white;
+    }
+
+    .refundsystem-doku-button__content {
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        grid-gap: 0 8px;
+    }
+
+    &.refundsystem-doku-button--primary {
+        background: $color-shopware-brand-500;
+        line-height: 36px;
+        border: 0 none;
+
+        &:hover {
+            background: $color-shopware-brand-700;
+            text-decoration: none;
+        }
+
+        &:active {
+            background: $color-shopware-brand-800;
+        }
+    }
+}
+
+a.refundsystem-doku-button:not(.sw-external-link, .sw-internal-link, .sw-button)::after {
+    content: none;
+}
+
+a.refundsystem-doku-button[href="none"] {
+    display: none;
+}
+

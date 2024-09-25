@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <!-- Sets -->
+        <service id="Swp\RefundSystemSix\Core\RefundSystem\RefundSystemDefinition">
+            <tag name="shopware.entity.definition" entity="refund_system" />
+        </service>
+
+        <service id="Swp\RefundSystemSix\Core\RefundSystem\Aggregate\RefundSystemTranslation\RefundSystemTranslationDefinition">
+            <tag name="shopware.entity.definition" entity="refund_system_translation" />
+        </service>
+
+        <service id="Swp\RefundSystemSix\Core\RefundSystem\Checkout\Cart\RefundSystemSixCartProcessor">
+            <argument type="service" id="sales_channel.product.repository"/>
+            <argument type="service" id="refund_system.repository"/>
+            <argument type="service" id="Shopware\Core\Checkout\Cart\Price\QuantityPriceCalculator"/>
+            <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService" />
+            <argument type="service" id="translator"/>
+
+            <!-- inject before product processor (5000) -->
+            <tag name="shopware.cart.processor" priority="4500" />
+            <tag name="shopware.cart.collector" priority="4500" />
+        </service>
+
+        <service id="Swp\RefundSystemSix\Storefront\Subscriber\Frontend">
+            <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService"/>
+            <argument type="service" id="refund_system.repository"/>
+            <tag name="kernel.event_subscriber"/>
+        </service>
+
+        <service id="Swp\RefundSystemSix\Core\Framework\RefundSystem\Api\RefundSystemProcessingController" public="true">
+            <argument type="service" id="language.repository"/>
+            <argument type="service" id="category.repository"/>
+            <argument type="service" id="product.repository"/>
+            <argument type="service" id="custom_field.repository"/>
+            <call method="setContainer">
+                <argument type="service" id="service_container" />
+            </call>
+        </service>
+
+        <service id="Swp\RefundSystemSix\Core\Content\Product\SalesChannel\Price\ProductPriceCalculatorDecorator"
+                 decorates="Shopware\Core\Content\Product\SalesChannel\Price\ProductPriceCalculator">
+            <argument type="service" id="Swp\RefundSystemSix\Core\Content\Product\SalesChannel\Price\ProductPriceCalculatorDecorator.inner" />
+            <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService"/>
+            <argument type="service" id="refund_system.repository"/>
+        </service>
+
+    </services>
+</container>

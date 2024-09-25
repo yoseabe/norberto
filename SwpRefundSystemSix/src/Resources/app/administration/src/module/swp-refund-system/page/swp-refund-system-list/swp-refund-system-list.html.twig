@@ -1,0 +1,85 @@
+{% block refund_system_six_list %}
+    <sw-page class="refund-system-six-list">
+
+        {% block refund_system_six_list_search_bar %}
+            <template #search-bar>
+                <sw-search-bar :initialSearchType="$tc('refundsystem.general.searchType')"
+                               :placeholder="$tc('refundsystem.general.placeholderSearchBar')"
+                               :initialSearch="term"
+                               @search="onSearch">
+                </sw-search-bar>
+            </template>
+        {% endblock %}
+
+        {% block refund_system_six_list_smart_bar_header %}
+            <template #smart-bar-header>
+                {% block refund_system_six_list_smart_bar_header_title %}
+                    <h2>
+                        {% block refund_system_six_list_smart_bar_header_title_text %}
+                            {{ $tc('refundsystem.list.textOverview') }}
+                            {% endblock %}
+
+                            {% block refund_system_six_list_smart_bar_header_amount %}
+                            <span v-if="!isLoading" class="sw-page__smart-bar-amount">
+                            ({{ total }})
+                            </span>
+                        {% endblock %}
+                    </h2>
+                {% endblock %}
+            </template>
+        {% endblock %}
+
+        {% block refund_system_six_list_smart_bar_actions %}
+        <template #smart-bar-actions>
+        {% block refund_system_six_list_smart_bar_actions_add %}
+        <sw-button class="graduated-price-groups-six-list__create-action" :routerLink="{ name: 'swp.refund.system.create' }" variant="primary">
+        {{ $tc('refundsystem.list.buttonAddGroup') }}
+        </sw-button>
+        {% endblock %}
+        </template>
+        {% endblock %}
+
+        <template #content>
+            {% block refund_system_six_list_content %}
+            <div class="graduated-price-groups-six-list__content">
+                {% block refund_system_six_list_grid %}
+                <sw-entity-listing ref="RefundSystemGrid"
+                                   v-if="refundSystem && total>0"
+                                   class="refund-system-six-list-grid"
+                                   :items="refundSystem"
+                                   :columns="getRefundSystemColumns()"
+                                   :repository="RefundSystemRepository"
+                                   detailRoute="swp.refund.system.detail"
+                                   :showSelection="true"
+                                   :isLoading="isLoading"
+                                   @items-delete-finish="getList"
+                                   @inline-edit-save="onInlineEditSave">
+
+                </sw-entity-listing>
+                {% endblock %}
+
+                {% block refund_system_six_list_empty_state %}
+                    <sw-empty-state v-else-if="!isLoading && !total" :title="$tc('refundsystem.list.messageEmpty')" :subline="$tc('refundsystem.list.messageEmpty')"></sw-empty-state>
+                {% endblock %}
+
+                {% block refund_system_six_list_grid_loader %}
+                    <sw-loader v-if="isLoading"></sw-loader>
+                {% endblock %}
+            </div>
+            {% endblock %}
+        </template>
+
+        {% block refund_system_six_list_sidebar %}
+            <sw-sidebar #sidebar>
+                {% block refund_system_six_list_sidebar_refresh %}
+                    <sw-sidebar-item
+                        icon="regular-undo"
+                        :title="$tc('sw-product-stream.list.titleSidebarItemRefresh')"
+                        @click="onRefresh">
+                    </sw-sidebar-item>
+                {% endblock %}
+            </sw-sidebar>
+        {% endblock %}
+
+    </sw-page>
+{% endblock %}

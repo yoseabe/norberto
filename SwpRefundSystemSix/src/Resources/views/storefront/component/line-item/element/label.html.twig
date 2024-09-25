@@ -1,0 +1,14 @@
+{% sw_extends '@Storefront/storefront/component/line-item/element/label.html.twig' %}
+
+{% block component_line_item_label %}
+    {% if lineItem.type is same as ('refundTotal') %}
+        {% set label = lineItem.label|trans|sw_sanitize %}
+        {% set label = label !== '' ? label : lineItem.label %}
+
+        <div class="line-item-label">
+            {{ label|u.truncate(60, '...', false)|raw }}
+        </div>
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,43 @@
+{
+    "name": "swp/refundsystem-six",
+    "description": "Refund-System-Six",
+    "version": "6.06.00",
+    "type": "shopware-platform-plugin",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Module Factory",
+            "homepage": "https://www.module-factory.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Swp\\RefundSystemSix\\": "src/"
+        }
+    },
+    "require": {
+        "shopware/core": "~6.6.0",
+        "shopware/administration": "~6.6.0"
+    },
+    "extra": {
+        "shopware-plugin-class": "Swp\\RefundSystemSix\\SwpRefundSystemSix",
+        "plugin-icon": "src/Resources/config/plugin.png",
+        "copyright": "(c) 2023 Iguana-Labs GmbH",
+        "label": {
+            "de-DE": "Artikelpfand",
+            "en-GB": "refund system"
+        },
+        "description": {
+            "de-DE": "Plugin, um Artikel die eine Pfandberechnung benötigen, anbieten zu können.",
+            "en-GB": "Plugin to offer articles that require a deposit calculation."
+        },
+        "manufacturerLink": {
+            "de-DE": "https://www.module-factory.com",
+            "en-GB": "https://www.module-factory.com"
+        },
+        "supportLink": {
+            "de-DE": "https://docs.google.com/document/d/1mmzZOThyrzXeFfxIReF7YlwCuxY6TB1ZBrpsaiQjUMw/edit?usp=sharing",
+            "en-GB": "https://docs.google.com/document/d/1GmIzwpqb9FLZFYtqOk5Ex_LUqSlyziy0jfUPGRxxHig/edit?usp=sharing"
+        }
+    }
+}

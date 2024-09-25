@@ -1,0 +1,17 @@
+{% sw_extends '@Storefront/storefront/component/line-item/type/product.html.twig' %}
+
+{% block component_line_item_type_product_col_total_price %}
+    {{ parent() }}
+
+    {% if config('SwpRefundSystemSix.config.showChildItems') is same as (true)
+        and lineItem.children|first.type is same as ('refund') %}
+
+        <div class="line-item-children nesting-level-{{ nestingLevel }}">
+            <div class="container line-item-children-elements">
+                {% sw_include '@Storefront/storefront/component/line-item/line-item.html.twig' with {
+                    lineItem: lineItem.children|first
+                } %}
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

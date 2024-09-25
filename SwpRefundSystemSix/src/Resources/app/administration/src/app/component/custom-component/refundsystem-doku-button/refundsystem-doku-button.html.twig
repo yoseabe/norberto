@@ -1,0 +1,19 @@
+{% block refundsystem_doku_button %}
+
+{% block refundsystem_doku_button_link %}
+<a
+    :href="dokuLink"
+    target="_blank"
+    class="refundsystem-doku-button"
+    :class="dokuButtonClasses"
+    rel="noopener"
+>
+    {% block refundsystem_doku_button_link_content %}
+    <span class="refundsystem-doku-button__content">
+        {{ $tc('swp-refundsystem-doku.doku') }}
+    </span>
+    {% endblock %}
+</a>
+{% endblock %}
+
+{% endblock %}
