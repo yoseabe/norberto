@@ -51,8 +51,9 @@ body {
   display: flex;
   justify-content: space-around;
   background-color: whitesmoke;
-  border-bottom: solid black 1px;
+  border-bottom: solid #dbdbdb 1px;
   align-items: center;
+  top: 0;
 }
 .navItem {
   font-size: 20px;
@@ -83,6 +84,25 @@ body {
 .underNorberto {
   color: white;
   font-size: 20px;
+}
+
+.werbung {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: white;
+  border: 1px solid #dbdbdb;
+  margin: 20px;
+  margin-top: 100px;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 10px;
+  border-radius: 20px;
+}
+.werbung > a {
+  text-decoration: none;
+}
+.werbung > a > img {
+  object-fit: contain;
+  max-width: 100%;
 }
 
 .landingImage {
@@ -122,8 +142,9 @@ body {
   display: flex;
   flex-direction: column;
   width: 40vw;
-  border: solid rgb(255, 255, 255) 1px;
+  border: solid rgb(217, 217, 217) 1px !important;
   margin-bottom: 20px;
+  border-radius: 20px;
 }
 .titelService {
   font-family: cursiveTitel;
